@@ -5,17 +5,37 @@
 // process - info about Environment where the program is being executed
 
 
-console.log(__dirname);
-setInterval(() => { 
-    console.log('hello');
-}, 1000)
-const amount = 12
+// console.log(__dirname);
+// setInterval(() => { 
+//     console.log('hello');
+// }, 1000)
+// const amount = 12
 
-if(amount < 10) {
-    console.log('small number')
-}
-else {
-    console.log('large number')
-}
+// if(amount < 10) {
+//     console.log('small number')
+// }
+// else {
+//     console.log('large number')
+// }
 
-console.log(`hey, it's my first node app!`);
+// console.log(`hey, it's my first node app!`);
+
+//CommonJS, every file is module (by default)
+//Modules - Encapsulated code (only share minimum)
+
+const names = require('./4-names');
+// const {john, peter} = require('./4-names');
+// console.log(names);
+const sayHi = require('./5-utils');
+
+const data = require('./6-alternative-flavor')
+// console.log(data);
+
+require('./7-mind-grenada')
+
+sayHi(names.john)
+sayHi(names.peter)
+
+
+
+
