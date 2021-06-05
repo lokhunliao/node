@@ -1,5 +1,5 @@
 //callback-hell
-
+console.log('start');
 const {readFile, writeFile} = require('fs');
 // const fs = require('fs');
 // false.readFileSync
@@ -21,7 +21,9 @@ readFile('./content/first.txt','utf8', (err, result) => {
                 console.log(err);
                 return
             }
-            console.log(result);
+            console.log('done with this task');
         })
     })
 })
+
+console.log('starting next task');
